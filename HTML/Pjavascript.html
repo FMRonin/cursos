@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<script>
+		function f() {
+			var hoy = new Date();
+			var h = hoy.getHours();
+			var m = hoy.getMinutes();
+			var s = hoy.getSeconds();
+			document.getElementById('d1').innerHTML = h+":"+m+":"+s;
+			var t = setTimeout(function() {f()}, 300);
+			// body...
+		}
+	</script>
+	<link rel="stylesheet" type="text/css" href="style.css">
+	<meta charset="UTF-8">
+	<title>probando JavaScript</title>
+</head>
+<body onload="f()">
+
+	<h1>JavaScrip</h1>
+	<p>Lenguaje orientado a objetos, ligero e interpretado, que se ejecuta dentro del cliente.</p>
+	<img src="EstructuraInternet.png" alt="" width="500px">
+
+	<div id="d1"> Hola </div>
+</body>
+</html>
