@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Ejemplo JavaScript</title>
+	<script>
+		var k;
+		var l;
+		var M = ["amarillo","azul","rojo","verde"];
+		var obj1 = {
+			nombre	: "Antonio",
+			peso	: 90,
+			altura	: 1.82,
+			masacorporal : function () {
+				var r = this.peso / (this.altura*this.altura); 
+				return Math.round(r);
+				// body...
+			}
+		};
+		function f() {
+			//window.alert("hola");
+			obj1.peso = document.getElementById('dato1').value;
+			obj1.altura = document.getElementById('dato2').value;
+			document.getElementById('resultado').innerHTML = obj1.masacorporal();
+			// body...
+		}
+	</script>
+</head>
+<body>
+	Dato 1 : <input type="text" id="dato1"/><br/>
+	Dato 2 : <input type="text" id="dato2"/><br/>
+	<input type="button" onclick="f()"/><br/>
+	Resultado : <span id="resultado"></span>
+</body>
+</html>
